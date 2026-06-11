@@ -35,18 +35,12 @@ h1.name .grad{display:block;background:linear-gradient(120deg,var(--cyan) 0%,var
 .hero-metrics{display:flex;gap:1.75rem;margin-top:2rem;opacity:0;animation:up .7s .9s forwards}
 .met .num{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--cyan)}
 .met .lbl{font-size:.6rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-top:.1rem}
-.orb-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:290px;height:290px;opacity:0;animation:fi 1s .5s forwards;margin:0 auto}
-.ring{position:absolute;border-radius:50%;border:1px solid rgba(0,232,200,.1)}
-.r1{inset:52px;animation:spin 11s linear infinite}
-.r2{inset:26px;animation:spin 19s linear infinite reverse}
-.r3{inset:0;animation:spin 28s linear infinite}
-.dot{position:absolute;width:7px;height:7px;border-radius:50%}
-.dc{background:var(--cyan);box-shadow:0 0 7px var(--cyan);top:50%;left:0;transform:translateY(-50%)}
-.db{background:var(--blue);box-shadow:0 0 7px var(--blue);top:0;left:50%;transform:translateX(-50%)}
-.dp{background:var(--purple);box-shadow:0 0 7px var(--purple);top:50%;right:0;left:auto;transform:translateY(-50%)}
-.core-c{position:absolute;inset:50%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;border:1px solid var(--cyan);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
-.core-c i{font-size:24px;color:var(--cyan)}
-.core-c span{font-family:var(--mono);font-size:.48rem;color:var(--cyan);letter-spacing:.14em;opacity:.7}
+.avatar-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:300px;height:380px;opacity:0;animation:fi 1s .5s forwards;margin:0 auto}
+.avatar-frame{position:relative;width:100%;height:100%;border:1px solid rgba(0,232,200,.35);clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);overflow:hidden;box-shadow:0 0 38px rgba(0,232,200,.18),inset 0 0 26px rgba(155,93,229,.12)}
+.avatar-frame::before{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(4,7,16,0) 55%,rgba(4,7,16,.65) 100%);box-shadow:inset 0 0 0 1px rgba(58,134,255,.18)}
+.avatar-img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(1.08) contrast(1.04)}
+.avatar-scan{position:absolute;left:0;right:0;height:38%;z-index:3;pointer-events:none;background:linear-gradient(180deg,rgba(0,232,200,0),rgba(0,232,200,.09),rgba(0,232,200,0));animation:scan 4.5s linear infinite}
+@keyframes scan{0%{top:-40%}100%{top:100%}}
 .fchip{position:absolute;font-family:var(--mono);font-size:.56rem;color:var(--cyan);letter-spacing:.07em;background:rgba(4,7,16,.88);padding:3px 8px;border:1px solid rgba(0,232,200,.18);white-space:nowrap;display:flex;align-items:center;gap:4px}
 .fchip i{font-size:11px}
 .fc1{top:10px;right:-16px}.fc2{bottom:10px;left:-20px}.fc3{top:47%;right:-34px;transform:translateY(-50%)}
@@ -146,7 +140,7 @@ footer i{font-size:13px;color:var(--cyan)}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,232,200,.35)}50%{box-shadow:0 0 0 5px rgba(0,232,200,0)}}
 .rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .rvd{opacity:1;transform:translateY(0)}
-@media(max-width:780px){.hero-inner,.cr{grid-template-columns:1fr}.orb-wrap{display:none}.s{padding:3rem 1.25rem}nav{padding:.85rem 1.25rem}.nav-links{gap:.85rem}.hf-banner{flex-direction:column}}
+@media(max-width:780px){.hero-inner,.cr{grid-template-columns:1fr}.avatar-wrap{order:-1;width:240px;height:300px}.fchip{display:none}.s{padding:3rem 1.25rem}nav{padding:.85rem 1.25rem}.nav-links{gap:.85rem}.hf-banner{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -178,11 +172,11 @@ footer i{font-size:13px;color:var(--cyan)}
       <div class="met"><div class="num">40%</div><div class="lbl">Faster Dev</div></div>
     </div>
   </div>
-  <div class="orb-wrap">
-    <div class="ring r1"><div class="dot dc"></div></div>
-    <div class="ring r2"><div class="dot db"></div></div>
-    <div class="ring r3"><div class="dot dp"></div></div>
-    <div class="core-c"><i class="ti ti-brain"></i><span>GEN·AI</span></div>
+  <div class="avatar-wrap">
+    <div class="avatar-frame">
+      <img src="avatar.png" alt="Satyam Jain — AI avatar" class="avatar-img">
+      <div class="avatar-scan"></div>
+    </div>
     <div class="fchip fc1"><i class="ti ti-phone-call"></i>Voice Agent</div>
     <div class="fchip fc2"><i class="ti ti-shield-lock"></i>AI Guard</div>
     <div class="fchip fc3"><i class="ti ti-robot"></i>Multi-Agent</div>
