@@ -119,8 +119,9 @@ h1.name .grad{display:block;background:linear-gradient(120deg,var(--cyan) 0%,var
 .sk-tag:hover{border-color:rgba(0,232,200,.28);color:var(--cyan)}
 .tl{position:relative;padding-left:1.6rem}
 .tl::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--cyan),rgba(0,232,200,.08))}
-.ti{position:relative;margin-bottom:2.5rem;padding-left:1.6rem}
-.ti::before{content:'';position:absolute;left:-2rem;top:5px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan);box-shadow:0 0 7px rgba(0,232,200,.45)}
+.exp-item{position:relative;margin-bottom:1.15rem;padding:1.35rem 1.6rem;background:var(--card);border:1px solid var(--border);transition:border-color .3s,transform .3s,box-shadow .3s}
+.exp-item:hover{border-color:rgba(0,232,200,.26);transform:translateX(4px);box-shadow:-4px 0 0 0 var(--cyan)}
+.exp-item::before{content:'';position:absolute;left:-2.05rem;top:1.55rem;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan);box-shadow:0 0 8px rgba(0,232,200,.5);z-index:2}
 .tp{font-family:var(--mono);font-size:.6rem;color:var(--cyan);letter-spacing:.14em;margin-bottom:.3rem;display:flex;align-items:center;gap:.38rem}
 .tp i{font-size:12px}
 .tc{font-size:.65rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.18rem}
@@ -293,9 +294,9 @@ footer i{font-size:13px;color:var(--cyan)}
 <div class="w">
   <div class="sh"><div class="se"><i class="ti ti-briefcase"></i>Career</div><h2 class="st">Experience</h2></div>
   <div class="tl">
-    <div class="ti rv"><div class="tp"><i class="ti ti-calendar"></i>Jan 2026 — Present</div><div class="tc">SAF3AI INC · Indore</div><div class="tr">AI Engineer</div><ul class="tps"><li>LLM security testing frameworks — prompt injection, data leakage prevention, behavioral analysis</li><li>Multi-agent orchestration with autonomous task delegation and inter-agent communication</li><li>Custom agent SDKs reduced development time by 40% across production deployments</li></ul></div>
-    <div class="ti rv"><div class="tp"><i class="ti ti-calendar"></i>Jul 2022 — Nov 2025</div><div class="tc">NOBORDER.z INNOVATIONS · Indore</div><div class="tr">Senior Gen AI Developer</div><ul class="tps"><li>Multi-tenant chatbot on Amazon Bedrock — Claude + Titan, 1000+ concurrent users, 75% uptime</li><li>Voice AI for Xana Genesis — Japanese TTS, multilingual STT, emotion-driven avatar animation</li><li>3D asset generation with sentence transformers + Unity database for metaverse apps</li></ul></div>
-    <div class="ti rv"><div class="tp"><i class="ti ti-calendar"></i>Jan 2022 — Mar 2023</div><div class="tc">WEBLLISTO TECHNOLOGIES · Indore</div><div class="tr">Python Developer</div><ul class="tps"><li>ERP Python modules boosted operational efficiency by 30%</li><li>Django e-commerce platform with auth, payments, and inventory management</li></ul></div>
+    <div class="exp-item rv"><div class="tp"><i class="ti ti-calendar"></i>Jan 2026 — Present</div><div class="tc">SAF3AI INC · Indore</div><div class="tr">AI Engineer</div><ul class="tps"><li>LLM security testing frameworks — prompt injection, data leakage prevention, behavioral analysis</li><li>Multi-agent orchestration with autonomous task delegation and inter-agent communication</li><li>Custom agent SDKs reduced development time by 40% across production deployments</li></ul></div>
+    <div class="exp-item rv"><div class="tp"><i class="ti ti-calendar"></i>Jul 2022 — Nov 2025</div><div class="tc">NOBORDER.z INNOVATIONS · Indore</div><div class="tr">Senior Gen AI Developer</div><ul class="tps"><li>Multi-tenant chatbot on Amazon Bedrock — Claude + Titan, 1000+ concurrent users, 75% uptime</li><li>Voice AI for Xana Genesis — Japanese TTS, multilingual STT, emotion-driven avatar animation</li><li>3D asset generation with sentence transformers + Unity database for metaverse apps</li></ul></div>
+    <div class="exp-item rv"><div class="tp"><i class="ti ti-calendar"></i>Jan 2022 — Mar 2023</div><div class="tc">WEBLLISTO TECHNOLOGIES · Indore</div><div class="tr">Python Developer</div><ul class="tps"><li>ERP Python modules boosted operational efficiency by 30%</li><li>Django e-commerce platform with auth, payments, and inventory management</li></ul></div>
   </div>
 </div>
 </section>
