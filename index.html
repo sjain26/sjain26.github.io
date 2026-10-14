@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Satyam Jain — AI Engineer specializing in LLM safety, content guardrails, prompt-injection defense, and low-latency model tooling.">
+<meta name="description" content="Satyam Jain — AI Engineer &amp; Data Scientist working on LLM safety, guardrails, applied machine learning, and data analytics.">
 <meta name="author" content="Satyam Jain">
-<meta property="og:title" content="Satyam Jain — AI Engineer">
-<meta property="og:description" content="LLM safety, guardrails & low-latency model tooling. 4+ years in production AI.">
+<meta property="og:title" content="Satyam Jain — AI Engineer &amp; Data Scientist">
+<meta property="og:description" content="LLM safety, applied ML &amp; data science. 4+ years in production AI.">
 <meta property="og:type" content="website">
 <title>Satyam Jain</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -136,7 +136,9 @@ nav.top .row{max-width:var(--wrap);margin:0 auto;height:100%;padding:0 28px;disp
 }
 .icon-btn:hover{color:var(--accent);border-color:var(--accent)}
 .icon-btn svg{width:17px;height:17px}
-@media(max-width:860px){.navlinks{display:none}}
+.navlinks a{white-space:nowrap}
+@media(max-width:1060px){.navlinks{display:none}}
+@media(max-width:440px){.brand .bsub{display:none}nav.top .row{padding:0 16px}.wrap{padding:0 16px}}
 
 /* ============ SECTION SHELL ============ */
 section{padding:100px 0;border-top:1px solid var(--line)}
@@ -246,6 +248,81 @@ section.hero{border-top:none;padding:0}
 .card ul li b{color:var(--ink);font-weight:600}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
 .tag{font-family:var(--font-mono);font-size:11px;color:var(--muted);background:var(--accent-wash);padding:4px 9px;border-radius:6px}
+
+/* ============ DATA SCIENCE ============ */
+.ds-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;align-items:start;margin-bottom:22px;
+  border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:30px}
+@media(max-width:900px){.ds-feature{grid-template-columns:1fr;gap:28px;padding:24px}}
+.ds-num{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--faint);margin-bottom:12px}
+.ds-feature h3{font-size:1.5rem;margin-bottom:8px}
+.ds-feature .meta{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.ds-feature p.d{color:var(--muted);margin-bottom:18px}
+.ds-feature ul li{position:relative;padding-left:20px;color:var(--muted);font-size:.96rem;margin-bottom:10px}
+.ds-feature ul li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border:1px solid var(--accent);border-radius:1px;transform:rotate(45deg)}
+.ds-feature ul li b{color:var(--ink);font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0 4px}
+.kpis .m{border:1px solid var(--line);border-radius:11px;padding:13px 14px;background:var(--raised)}
+.kpis .v{font-family:var(--font-mono);font-weight:700;font-size:1.35rem;color:var(--accent);line-height:1.1}
+.kpis .k{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-top:6px}
+
+/* benchmark dot plot */
+.bench{border:1px solid var(--line);border-radius:14px;background:var(--raised);padding:20px 20px 16px}
+.bench .bt{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.bench .bt h4{font-size:.98rem;letter-spacing:-.01em}
+.bench .legend{display:flex;gap:14px;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.bench .legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.bench .legend .acc{background:var(--accent)}
+.bench .legend .pre{background:var(--raised);border:2px solid var(--signal)}
+.brow{display:grid;grid-template-columns:76px 1fr 92px;align-items:center;gap:12px;padding:7px 0;border-top:1px solid var(--line)}
+.brow:first-of-type{border-top:none}
+.brow .an{font-family:var(--font-mono);font-size:12px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brow.best .an{color:var(--accent);font-weight:700}
+.track{position:relative;height:18px}
+.track::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line-2)}
+.track .span{position:absolute;top:50%;height:2px;margin-top:-1px;background:var(--line-2)}
+.track .dot{position:absolute;top:50%;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;border-radius:50%}
+.track .dot.a{background:var(--accent)}
+.track .dot.p{background:var(--raised);border:2px solid var(--signal)}
+.brow .vals{font-family:var(--font-mono);font-size:11.5px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.brow .vals b{color:var(--ink);font-weight:600}
+.axis{display:grid;grid-template-columns:76px 1fr 92px;gap:12px;margin-top:6px}
+.axis .ticks{position:relative;height:14px;font-family:var(--font-mono);font-size:10px;color:var(--faint)}
+.axis .ticks span{position:absolute;transform:translateX(-50%)}
+.bench .note{font-family:var(--font-mono);font-size:11px;color:var(--faint);margin-top:12px}
+@media(max-width:520px){
+  .ds-feature{padding:20px 16px}
+  .bench{padding:16px 12px 14px}
+  .brow,.axis{grid-template-columns:62px 1fr 62px;gap:8px}
+  .brow .an{font-size:10.5px}
+  .brow .vals{font-size:10.5px}
+  .kpis .v{font-size:1.15rem}
+}
+
+.ds-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:820px){.ds-grid{grid-template-columns:1fr}}
+.ds-grid .card{display:flex;flex-direction:column}
+.ds-grid .card .tags{margin-top:auto;padding-top:20px}
+.headline{display:flex;align-items:baseline;gap:10px;margin:-4px 0 16px;padding:12px 14px;border-radius:10px;background:var(--accent-wash)}
+.headline .v{font-family:var(--font-mono);font-weight:700;font-size:1.15rem;color:var(--accent);white-space:nowrap}
+.headline .k{font-size:.88rem;color:var(--muted);line-height:1.4}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.links a{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11.5px;font-weight:500;color:var(--muted);
+  border:1px solid var(--line-2);border-radius:7px;padding:6px 11px;transition:color .18s,border-color .18s}
+.links a:hover{color:var(--accent);border-color:var(--accent)}
+.links a.live{color:var(--signal);border-color:color-mix(in srgb,var(--signal) 45%,transparent)}
+.links a.live:hover{color:var(--signal);border-color:var(--signal)}
+.links a svg{width:12px;height:12px}
+
+/* dataset strip */
+.datasets{margin-top:34px}
+.dsets{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:820px){.dsets{grid-template-columns:1fr}}
+.dset{display:flex;flex-direction:column;gap:5px;border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface);transition:border-color .18s,transform .18s}
+.dset:hover{border-color:var(--accent);transform:translateY(-2px)}
+.dset .dn{font-family:var(--font-mono);font-size:12.5px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dset .dv{font-family:var(--font-mono);font-weight:700;font-size:1.2rem;color:var(--accent)}
+.dset .dk{font-size:.88rem;color:var(--muted)}
+.ds-feature + .ds-feature{margin-top:0}
 
 /* ============ OSS SPOTLIGHT ============ */
 .oss{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
@@ -370,9 +447,11 @@ footer .up:hover{color:var(--accent)}
 
 <nav class="top">
   <div class="row">
-    <a class="brand" href="#top"><span class="dot"></span>satyam.jain<span style="color:var(--faint)">/</span><span style="color:var(--accent)">safety</span></a>
+    <a class="brand" href="#top"><span class="dot"></span>satyam.jain<span class="bsub"><span style="color:var(--faint)">/</span><span style="color:var(--accent)">safety</span></span></a>
     <div class="navlinks" id="navlinks">
       <a href="#work">Work</a>
+      <a href="#datascience">Data Science</a>
+      <a href="#advanced">Research</a>
       <a href="#opensource">Open Source</a>
       <a href="#models">Models</a>
       <a href="#experience">Experience</a>
@@ -400,11 +479,12 @@ footer .up:hover{color:var(--accent)}
       <canvas id="sigcanvas"></canvas>
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow hero-eyebrow">AI Engineer · LLM Safety &amp; Applied ML</div>
+          <div class="eyebrow hero-eyebrow">AI Engineer · Data Scientist · LLM Safety</div>
           <h1>Satyam Jain</h1>
-          <div class="role">Guardrails, red-teaming &amp; low-latency model safety</div>
+          <div class="role">Guardrails, applied ML &amp; data-driven products</div>
           <p class="bio">I build AI systems that hold up in production. Currently at <strong>SAF3AI</strong>, working on <strong>content safety guardrails</strong> across text and image, along with LLM security testing and multi-agent orchestration.</p>
           <p class="bio" style="margin-top:14px">On my own time I work on model safety and privacy tooling — <a href="https://pypi.org/project/pii-protector/"><strong>pii-protector</strong></a>, a low-latency PII detection library on PyPI, and <strong>Mamba</strong> state-space classifiers for prompt-injection detection. Before SAF3AI, four years shipping generative AI at NOBORDER.z.</p>
+          <p class="bio" style="margin-top:14px">Trained as a <strong>data scientist</strong> (M.Tech, Data Science) — I still do the classical work: EDA, feature engineering, model benchmarking, anomaly detection, and analytics apps that let people query data in plain English.</p>
           <div class="availbar">
             <span class="live"><b></b> Available</span>
             <span>·</span><span>4+ yrs production AI</span>
@@ -436,7 +516,7 @@ footer .up:hover{color:var(--accent)}
         <div class="cell"><div class="num tnum">4+</div><div class="lbl">Years in prod AI</div></div>
         <div class="cell"><div class="num tnum">20+</div><div class="lbl">Open models on HF</div></div>
         <div class="cell"><div class="num tnum">&lt;3ms</div><div class="lbl">PII fast path</div></div>
-        <div class="cell"><div class="num tnum">50+</div><div class="lbl">PII types covered</div></div>
+        <div class="cell"><div class="num tnum">98.2%</div><div class="lbl">Best spam-model acc.</div></div>
       </div>
     </div>
   </div>
@@ -526,6 +606,277 @@ footer .up:hover{color:var(--accent)}
   </div>
 </section>
 
+<!-- ================= DATA SCIENCE ================= -->
+<section id="datascience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Data Science</span>
+      <h2>Data science projects</h2>
+      <p class="lead">Classical ML, analytics and data pipelines &mdash; from EDA and model benchmarking to apps that let non-technical users ask questions of their data.</p>
+    </div>
+
+    <!-- Featured: spam classifier with benchmark -->
+    <article class="ds-feature reveal">
+      <div>
+        <div class="ds-num">01 / FEATURED · CLASSICAL ML</div>
+        <h3>SMS Spam Detection</h3>
+        <div class="meta">NLP · Classification · Model serving</div>
+        <p class="d">End-to-end text classification on 5,572 labelled SMS messages (5,169 after de-duplication): cleaning, EDA, feature engineering, a benchmark of 11 algorithms, and a FastAPI service for the winning model.</p>
+        <ul>
+          <li>Preprocessing with NLTK &mdash; tokenisation, stop-word removal, stemming &mdash; plus EDA on message length, sentence counts and per-class word clouds</li>
+          <li><b>TF-IDF</b> features, tuned to the top 3,000 terms</li>
+          <li>Ranked by <b>precision</b> as well as accuracy, since flagging a real message as spam costs more than missing one</li>
+          <li>Final <b>soft-voting ensemble</b> (SVC + Naive Bayes + Extra Trees), pickled and served through FastAPI</li>
+        </ul>
+        <div class="kpis">
+          <div class="m"><div class="v tnum">98.2%</div><div class="k">Accuracy</div></div>
+          <div class="m"><div class="v tnum">99.2%</div><div class="k">Precision</div></div>
+          <div class="m"><div class="v tnum">11</div><div class="k">Models compared</div></div>
+        </div>
+        <div class="links">
+          <a href="https://github.com/sjain26/spam-classifier" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Source</a>
+          <a href="https://github.com/sjain26/spam-classifier/blob/main/sms-spam-detection.ipynb" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Notebook</a>
+        </div>
+      </div>
+
+      <div class="bench" role="figure" aria-label="Accuracy and precision of seven classifiers on the held-out test set">
+        <div class="bt">
+          <h4>Held-out test set (n = 1,034)</h4>
+          <div class="legend"><span><i class="acc"></i>Accuracy</span><span><i class="pre"></i>Precision</span></div>
+        </div>
+        <div id="benchRows"></div>
+        <div class="axis"><span></span><div class="ticks" id="benchTicks"></div><span></span></div>
+        <p class="note">Axis starts at 88% to separate close scores.</p>
+      </div>
+    </article>
+
+    <div class="ds-grid">
+
+      <article class="card reveal">
+        <div class="chead"><h3>Healthcare Analytics Assistant</h3><span class="pill">Live</span></div>
+        <div class="meta">02 · Analytics · Text-to-SQL</div>
+        <div class="headline"><span class="v">NL &rarr; SQL</span><span class="k">Plain-English questions answered over multiple healthcare datasets</span></div>
+        <ul>
+          <li>Turns questions into <b>SQL / pandas</b> queries, joins the datasets on the fly, and only sends the result subset to the LLM</li>
+          <li>Data audit and preprocessing step that profiles quality issues before any analysis runs</li>
+          <li>Evaluation suite that scores <b>SQL correctness</b> and answer quality</li>
+          <li>Works with SQL databases, Excel and CSV through a Streamlit UI</li>
+        </ul>
+        <div class="links">
+          <a class="live" href="https://infogain-healthcare.streamlit.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>Live demo</a>
+          <a href="https://github.com/sjain26/infogain-healthcare" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Source</a>
+        </div>
+        <div class="tags"><span class="tag">pandas</span><span class="tag">SQL</span><span class="tag">Data Audit</span><span class="tag">Llama 4</span><span class="tag">Streamlit</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="chead"><h3>Financial Research Agent</h3><span class="pill">Live</span></div>
+        <div class="meta">03 · Market data · Multi-agent</div>
+        <div class="headline"><span class="v">6 agents</span><span class="k">Query &rarr; news &rarr; prices &rarr; retrieval &rarr; analysis &rarr; report</span></div>
+        <ul>
+          <li>Pulls historical stock prices from <b>Alpha Vantage</b> and compares companies over a requested period</li>
+          <li>Combines price data with recent news and a <b>Pinecone</b> knowledge base</li>
+          <li>Produces structured reports: comparison tables plus a written summary</li>
+          <li>LangGraph routing with a fallback at every stage</li>
+        </ul>
+        <div class="links">
+          <a class="live" href="https://finance-agent-chapter247.streamlit.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>Live demo</a>
+          <a href="https://github.com/sjain26/finance-agent" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Source</a>
+        </div>
+        <div class="tags"><span class="tag">Time Series</span><span class="tag">LangGraph</span><span class="tag">Pinecone</span><span class="tag">Alpha Vantage</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="chead"><h3>Accounting Migration &amp; Anomaly Detection</h3><span class="pill">Client</span></div>
+        <div class="meta">04 · Financial data · Anomaly detection</div>
+        <div class="headline"><span class="v">70&ndash;80%</span><span class="k">of account mappings auto-approved after 3 runs on similar clients</span></div>
+        <ul>
+          <li>Maps chart-of-accounts between systems with <b>confidence scores</b>; only low-confidence items go to a human</li>
+          <li>Scans journals for <b>10+ anomaly types</b> instead of manual line-by-line review</li>
+          <li>Trial-balance reconciliation with automated variance detection and a CFO-ready memo</li>
+          <li>Semantic memory so mapping decisions improve with every migration</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/sjain26/accounting-migration-system" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Source</a>
+        </div>
+        <div class="tags"><span class="tag">Anomaly Detection</span><span class="tag">Reconciliation</span><span class="tag">Human-in-the-loop</span><span class="tag">Python</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="chead"><h3>Domain-Agnostic Data Crawler</h3><span class="pill">Live</span></div>
+        <div class="meta">05 · Data collection · Classification</div>
+        <div class="headline"><span class="v">Any site</span><span class="k">&rarr; structured, Schema.org-normalised records</span></div>
+        <ul>
+          <li>Crawls public websites and extracts structured product and service data</li>
+          <li><b>Industry classification</b> via sentence-embedding similarity (banking, e-commerce, insurance&hellip;)</li>
+          <li>Relational data in PostgreSQL, embeddings in <b>Qdrant</b> for semantic search and comparison</li>
+          <li>Question answering over the crawled data through a FastAPI + Streamlit front end</li>
+        </ul>
+        <div class="links">
+          <a class="live" href="https://ai-domain-agnostic-crawler.streamlit.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>Live demo</a>
+          <a href="https://github.com/sjain26/AI_Domain_Agnostic_Crawler_Schema" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Source</a>
+        </div>
+        <div class="tags"><span class="tag">Sentence Transformers</span><span class="tag">Qdrant</span><span class="tag">PostgreSQL</span><span class="tag">Crawl4AI</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ADVANCED DATA SCIENCE ================= -->
+<section id="advanced">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Advanced Data Science · Research</span>
+      <h2>Large-scale modelling &amp; evaluation</h2>
+      <p class="lead">Experiments on datasets from 150K to 3.9M samples: class-imbalance handling, multi-task heads, parameter-efficient fine-tuning, and benchmarks that test how models hold up outside their training data. Metrics are from the published model and dataset cards.</p>
+    </div>
+
+    <!-- Featured A: generalisation gap benchmark -->
+    <article class="ds-feature reveal">
+      <div>
+        <div class="ds-num">06 / FEATURED · EVALUATION STUDY</div>
+        <h3>Generalisation Gap in Prompt-Injection Detectors</h3>
+        <div class="meta">Benchmarking · Distribution shift · Error analysis</div>
+        <p class="d">A reproducible harness that runs open prompt-injection classifiers against a 5,000-sample public benchmark and a 500-sample hand-built attack set, logging per-sample predictions, confusion counts and FPR.</p>
+        <ul>
+          <li>The top model scored <b>98.1% accuracy</b> on the public benchmark, but its <b>recall fell to 26.4%</b> on unseen attack styles</li>
+          <li>Leaderboard scores alone hide this kind of <b>distribution shift</b>, so the harness breaks results down by attack type</li>
+          <li>Single command reproduces every table: <span class="mono" style="font-size:.86em">summary.csv</span>, per-sample detail files and a ranked report</li>
+        </ul>
+        <div class="kpis">
+          <div class="m"><div class="v tnum">5,500</div><div class="k">Eval samples</div></div>
+          <div class="m"><div class="v tnum">&minus;56</div><div class="k">F1 pts, top model</div></div>
+          <div class="m"><div class="v tnum">5</div><div class="k">Metrics / model</div></div>
+        </div>
+        <div class="links">
+          <a href="https://huggingface.co/datasets/jainsatyam26/prompt-injection-comparison" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Harness &amp; results</a>
+        </div>
+      </div>
+
+      <div class="bench" role="figure" aria-label="F1 score of three prompt-injection models on a public benchmark and on a custom attack set">
+        <div class="bt">
+          <h4>F1 score: public benchmark vs. unseen attacks</h4>
+          <div class="legend"><span><i class="acc"></i>Public (n=5,000)</span><span><i class="pre"></i>Custom (n=500)</span></div>
+        </div>
+        <div id="giRows"></div>
+        <div class="axis"><span></span><div class="ticks" id="giTicks"></div><span></span></div>
+        <p class="note">Longer line = bigger drop on unseen attacks. A fourth model predicted no positives on either set and is left out.</p>
+      </div>
+    </article>
+
+    <!-- Featured B: Mamba vs XLM-R -->
+    <article class="ds-feature reveal">
+      <div>
+        <div class="ds-num">07 / FEATURED · ARCHITECTURE STUDY</div>
+        <h3>State-Space vs. Transformer Under Class Imbalance</h3>
+        <div class="meta">Mamba-2 · XLM-R · Imbalanced multi-label</div>
+        <p class="d">Same 285K-sample dataset and the same balancing recipe for both models, so the only variable is the architecture: a 9.6M-parameter Mamba-2 SSM against a 278M-parameter XLM-RoBERTa.</p>
+        <ul>
+          <li>Dual-head design: <b>binary safety</b> plus an <b>11-class multi-label</b> harm head</li>
+          <li>Imbalance handled with 40:60 resampling, a <b>30K per-class cap</b> and a WeightedRandomSampler for rare classes</li>
+          <li>Mamba-2 keeps <b>97% of the safety accuracy</b> with <b>29&times; fewer parameters</b> and linear-time sequence cost</li>
+          <li>The per-class gap is widest on sexual content and weapons, which shows where the extra capacity actually helps</li>
+        </ul>
+        <div class="kpis">
+          <div class="m"><div class="v tnum">29&times;</div><div class="k">Fewer params</div></div>
+          <div class="m"><div class="v tnum">83.1%</div><div class="k">Mamba safety acc.</div></div>
+          <div class="m"><div class="v tnum">85.6%</div><div class="k">XLM-R safety acc.</div></div>
+        </div>
+        <div class="links">
+          <a href="https://huggingface.co/jainsatyam26/mamba-shield-v2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>mamba-shield-v2</a>
+          <a href="https://huggingface.co/jainsatyam26/xlmr-shield" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>xlmr-shield</a>
+        </div>
+      </div>
+
+      <div class="bench" role="figure" aria-label="Per-class F1 of XLM-R and Mamba-2 across eleven harm categories">
+        <div class="bt">
+          <h4>Per-class test F1</h4>
+          <div class="legend"><span><i class="acc"></i>XLM-R 278M</span><span><i class="pre"></i>Mamba-2 9.6M</span></div>
+        </div>
+        <div id="ssmRows"></div>
+        <div class="axis"><span></span><div class="ticks" id="ssmTicks"></div><span></span></div>
+        <p class="note">Axis runs 0.2&ndash;0.9 F1. Macro F1: XLM-R 0.612 · Mamba-2 0.482.</p>
+      </div>
+    </article>
+
+    <div class="ds-grid">
+
+      <article class="card reveal">
+        <div class="chead"><h3>Multi-Task Classifier on 3.9M Samples</h3><span class="pill">Scale</span></div>
+        <div class="meta">08 · DeBERTa-v3 · Multi-task learning</div>
+        <div class="headline"><span class="v">0.907</span><span class="k">multi-label F1 &middot; 92.8% binary safety accuracy</span></div>
+        <ul>
+          <li>One encoder, <b>three heads</b> trained jointly: binary safe/unsafe, single-label category, and multi-label categories</li>
+          <li>3.18M train / 398K validation / 398K test split</li>
+          <li>Trained on a single <b>T4 GPU in ~8 hours</b> with AdamW, linear warm-up and 128-token sequences</li>
+        </ul>
+        <div class="links">
+          <a href="https://huggingface.co/jainsatyam26/guard-safety-classifier" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>Model card</a>
+        </div>
+        <div class="tags"><span class="tag">DeBERTa-v3</span><span class="tag">Multi-task</span><span class="tag">Multi-label</span><span class="tag">PyTorch</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="chead"><h3>Multilingual Injection Detector</h3><span class="pill">EN · HI</span></div>
+        <div class="meta">09 · Qwen3-0.6B · Slice-based evaluation</div>
+        <div class="headline"><span class="v">0.90 F1</span><span class="k">average across 4 test slices &middot; 48 ms mean, 55 ms p95</span></div>
+        <ul>
+          <li>3-class classifier (benign / injection / jailbreak) for <b>English, Hindi and Hinglish</b></li>
+          <li>Evaluated by slice (adversarial, multilingual, API payloads, public benchmark), with <b>FPR and FNR</b> for each</li>
+          <li>Error analysis found Hindi-only attacks had a 0.33 FNR, which is now documented as a known limitation</li>
+          <li>Throughput of <b>20.6 req/s</b> on a single GPU</li>
+        </ul>
+        <div class="links">
+          <a href="https://huggingface.co/jainsatyam26/sentinel-v2-pytorch" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>Model card</a>
+        </div>
+        <div class="tags"><span class="tag">Qwen3</span><span class="tag">Multilingual NLP</span><span class="tag">FPR / FNR</span><span class="tag">Latency</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="chead"><h3>LoRA Fine-Tune with Focal Loss</h3><span class="pill">PEFT</span></div>
+        <div class="meta">10 · Gemma-4 · Imbalanced classification</div>
+        <div class="headline"><span class="v">151,560</span><span class="k">training samples across 11 harm classes</span></div>
+        <ul>
+          <li><b>LoRA</b> (r=16, &alpha;=32) on a 5B Gemma-4 model, with the first 20 layers frozen</li>
+          <li><b>Focal loss (&gamma;=2)</b> plus square-root inverse class weights, so rare classes don&rsquo;t get drowned out</li>
+          <li>Custom MLP classification head on top of the decoder, with cosine LR and 6% warm-up</li>
+          <li>Trained on the published guardrail-215k dataset: 151,560 train / 16,840 validation</li>
+        </ul>
+        <div class="links">
+          <a href="https://huggingface.co/jainsatyam26/gemma4-guardrail-v5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>Model card</a>
+        </div>
+        <div class="tags"><span class="tag">LoRA</span><span class="tag">Focal Loss</span><span class="tag">Class Weights</span><span class="tag">Gemma</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="chead"><h3>19-Class Taxonomy &amp; Error Analysis</h3><span class="pill">LLM</span></div>
+        <div class="meta">11 · Qwen2.5-3B · Per-class diagnostics</div>
+        <div class="headline"><span class="v">0.617</span><span class="k">macro F1 over 19 fine-grained harm classes</span></div>
+        <ul>
+          <li>LoRA fine-tune of Qwen2.5-3B, merged into a standalone model for deployment</li>
+          <li><b>Per-class precision / recall</b> report: strong on self-harm (0.93 F1) and bias (0.98), weak on hate speech (0.16)</li>
+          <li>Hate speech has 0.11 recall, and it overlaps with the discrimination and bias classes. That points to <b>taxonomy overlap</b> as a likely cause, to check in the next labelling pass</li>
+        </ul>
+        <div class="links">
+          <a href="https://huggingface.co/jainsatyam26/safety-classifier-qwen2.5-3b-merged" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M7 7h10v10"/></svg>Model card</a>
+        </div>
+        <div class="tags"><span class="tag">Qwen2.5</span><span class="tag">LoRA</span><span class="tag">Error Analysis</span><span class="tag">Taxonomy</span></div>
+      </article>
+
+    </div>
+
+    <div class="datasets reveal">
+      <div class="pipe-title" style="margin-top:0">Published datasets</div>
+      <div class="dsets">
+        <a class="dset" href="https://huggingface.co/datasets/jainsatyam26/guardrail-215k-splits-v3" target="_blank" rel="noopener"><span class="dn">guardrail-215k-splits</span><span class="dv tnum">145K rows</span><span class="dk">Train/validation splits &middot; 3 iterations</span></a>
+        <a class="dset" href="https://huggingface.co/datasets/jainsatyam26/aegis-ai-content-safety-processed" target="_blank" rel="noopener"><span class="dn">aegis-content-safety-processed</span><span class="dv tnum">30.9K rows</span><span class="dk">Prompt/response pairs with multi-label harm tags</span></a>
+        <a class="dset" href="https://huggingface.co/datasets/jainsatyam26/nsfw-safety-benchmark" target="_blank" rel="noopener"><span class="dn">nsfw-safety-benchmark</span><span class="dv tnum">537 downloads</span><span class="dk">Evaluation benchmark for safety classifiers</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= OPEN SOURCE ================= -->
 <section id="opensource">
   <div class="wrap">
@@ -607,7 +958,6 @@ result = <span class="c-fn">Protector</span>().<span class="c-fn">scan</span>(<s
         <div class="rows">
           <a class="mrow" href="https://huggingface.co/jainsatyam26/mamba-shield-v2" target="_blank" rel="noopener"><span class="nm"><span>mamba-shield-v2</span><svg class="arw" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg></span><span class="t">SSM</span></a>
           <a class="mrow" href="https://huggingface.co/jainsatyam26/mamba-shield" target="_blank" rel="noopener"><span class="nm"><span>mamba-shield</span><svg class="arw" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg></span><span class="t">SSM</span></a>
-          <a class="mrow" href="https://huggingface.co/jainsatyam26/base-prompt-injection-v2" target="_blank" rel="noopener"><span class="nm"><span>base-prompt-injection-v2</span><svg class="arw" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg></span><span class="t">0.2B</span></a>
           <a class="mrow" href="https://huggingface.co/jainsatyam26/sentinel-v2-pytorch" target="_blank" rel="noopener"><span class="nm"><span>sentinel-v2-pytorch</span><svg class="arw" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg></span><span class="t">0.6B</span></a>
         </div>
       </div>
@@ -694,13 +1044,16 @@ result = <span class="c-fn">Protector</span>().<span class="c-fn">scan</span>(<s
     </div>
     <div class="skill-grid">
       <div class="skill reveal"><div class="k">Languages</div><div class="v">Python, C++, JavaScript, SQL</div></div>
+      <div class="skill reveal"><div class="k">Data Science</div><div class="v">pandas, NumPy, EDA, feature engineering, model evaluation, anomaly detection, Matplotlib, Seaborn</div></div>
+      <div class="skill reveal"><div class="k">Classical ML</div><div class="v">scikit-learn, XGBoost, ensembles (voting / stacking), SVM, Naive Bayes, TF-IDF</div></div>
       <div class="skill reveal"><div class="k">ML &amp; Deep Learning</div><div class="v">PyTorch, TensorFlow, Keras, scikit-learn, Transformers</div></div>
       <div class="skill reveal"><div class="k">LLM &amp; NLP</div><div class="v">LangChain, OpenAI SDK, Claude SDK, embeddings, vector search, spaCy, NLTK</div></div>
       <div class="skill reveal"><div class="k">AI Safety</div><div class="v">Guardrail fine-tuning, prompt-injection detection, PII detection, Llama Guard, Prompt Guard, red teaming</div></div>
-      <div class="skill reveal"><div class="k">Architectures</div><div class="v">Transformers, Mamba / state-space models, fine-tuning pipelines</div></div>
+      <div class="skill reveal"><div class="k">Architectures</div><div class="v">Transformers, Mamba / SSMs, LoRA &amp; QLoRA, multi-task heads, focal loss &amp; class-imbalance handling</div></div>
       <div class="skill reveal"><div class="k">LLM Serving</div><div class="v">vLLM, Ollama, self-hosted &amp; offline deployment, ONNX Runtime, INT8 quantization</div></div>
       <div class="skill reveal"><div class="k">Cloud &amp; Infra</div><div class="v">AWS Bedrock, EC2, SageMaker, Transcribe, Docker, FastAPI</div></div>
       <div class="skill reveal"><div class="k">Voice &amp; Vision</div><div class="v">Whisper, VoiceVox, TTS/STT, OpenCV, Stable Diffusion, ControlNet</div></div>
+      <div class="skill reveal"><div class="k">Data &amp; Apps</div><div class="v">SQL, PostgreSQL, Qdrant, Pinecone, Streamlit, Jupyter</div></div>
       <div class="skill reveal"><div class="k">Tooling</div><div class="v">Git, Linux, n8n, Selenium, BeautifulSoup, MATLAB</div></div>
     </div>
   </div>
@@ -735,7 +1088,7 @@ result = <span class="c-fn">Protector</span>().<span class="c-fn">scan</span>(<s
       <div class="pitch reveal">
         <span class="eyebrow" style="margin-bottom:18px">Get in touch</span>
         <span class="big">Let&rsquo;s build safer AI.</span>
-        Open to AI engineering roles and research collaboration — particularly LLM safety, guardrails, and applied ML. The fastest way to reach me is email.
+        Open to AI engineering and data science roles, and research collaboration — particularly LLM safety, guardrails, and applied ML. The fastest way to reach me is email.
       </div>
       <div class="clist reveal">
         <a href="mailto:jainsatyam26@gmail.com"><span class="lb">Email</span><span class="val"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>jainsatyam26@gmail.com</span></a>
@@ -832,6 +1185,42 @@ result = <span class="c-fn">Protector</span>().<span class="c-fn">scan</span>(<s
       });
     });
   });
+
+  /* dumbbell dot plots: filled dot = series A, hollow = series B */
+  function dotPlot(rowsId,ticksId,rows,lo,hi,ticks,fmt,tlabel,names){
+    var el=document.getElementById(rowsId);if(!el)return;
+    function pos(v){return ((v-lo)/(hi-lo)*100).toFixed(2)+"%";}
+    el.innerHTML=rows.map(function(r){
+      var a=r[1],b=r[2],l=Math.min(a,b),h=Math.max(a,b);
+      return '<div class="brow'+(r[3]?' best':'')+'"><span class="an">'+r[0]+'</span>'+
+        '<div class="track"><span class="span" style="left:'+pos(l)+';width:calc('+pos(h)+' - '+pos(l)+')"></span>'+
+        '<span class="dot p" style="left:'+pos(b)+'" title="'+names[1]+' '+fmt(b)+'"></span>'+
+        '<span class="dot a" style="left:'+pos(a)+'" title="'+names[0]+' '+fmt(a)+'"></span></div>'+
+        '<span class="vals"><b>'+fmt(a)+'</b> / '+fmt(b)+'</span></div>';
+    }).join("");
+    document.getElementById(ticksId).innerHTML=ticks.map(function(t){
+      return '<span style="left:'+pos(t)+'">'+tlabel(t)+'</span>';}).join("");
+  }
+  function pct1(v){return (v*100).toFixed(1);}
+  function f2(v){return v.toFixed(2).replace(/^0/,"");}
+
+  /* spam classifier: accuracy vs precision */
+  dotPlot("benchRows","benchTicks",[
+    ["Ensemble",.981625,.991736,1],["ExtraTrees",.977756,.991453],["SVC",.972921,.974138],
+    ["XGBoost",.971954,.950413],["RandomFor.",.970019,.990826],["NaiveBayes",.959381,1],["KNN",.900387,1]
+  ],.88,1,[.88,.92,.96,1],pct1,function(t){return Math.round(t*100)+"%";},["Accuracy","Precision"]);
+
+  /* prompt-injection generalisation gap: F1 public vs custom */
+  dotPlot("giRows","giTicks",[
+    ["Qualifire",.9757,.4177],["ProtectAI",.6557,.6945],["PromptGuard",.5743,.4848]
+  ],0,1,[0,.25,.5,.75,1],pct1,function(t){return Math.round(t*100);},["Public F1","Custom F1"]);
+
+  /* Mamba-2 vs XLM-R per-class F1 */
+  dotPlot("ssmRows","ssmTicks",[
+    ["Crime",.7812,.68],["Violence",.7195,.61],["Privacy",.6972,.55],["Sexual",.6889,.44],
+    ["Injection",.6587,.60],["Hate",.6302,.47],["Self-harm",.5734,.49],["Benign",.5339,.41],
+    ["Weapons",.5208,.32],["Misinfo",.4748,.38],["Minors",.4491,.35]
+  ],.2,.9,[.2,.4,.6,.8],f2,f2,["XLM-R","Mamba-2"]);
 
   /* hero signal canvas — a waveform held under a guardrail threshold */
   var cv=document.getElementById("sigcanvas"),ctx=cv&&cv.getContext("2d"),raf,t0=0;
